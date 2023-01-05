@@ -1,0 +1,23 @@
+.a{
+    height: 1000px;
+    background: linear-gradient( white);
+    
+}
+.card{
+    margin-top: 70px;
+}
+.imgcrd{
+    height: 620px;
+    
+}
+/* .form-control{
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid black;
+    box-shadow: none;
+    border-radius: 0;
+    
+}
+.form-control:focus{
+    box-shadow: none;
+} */
