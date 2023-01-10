@@ -1,0 +1,25 @@
+.des{
+    background:linear-gradient(green,#FFD133);
+    /* display: flex; */
+    /* align-items: center;
+    justify-content: center;
+    height: 30vh; */
+
+}
+.crd{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 120px;
+    
+}
+.form-control{
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid black;
+    box-shadow: none;
+    border-radius: 0;
+}
+.form-control:focus{
+    box-shadow: none;
+}
