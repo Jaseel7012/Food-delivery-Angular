@@ -8,7 +8,8 @@ import { RegistrationPageComponent } from './registration-page/registration-page
 import {FormsModule} from '@angular/forms';
 import { ShowHidePasswordModule } from 'ngx-show-hide-password';
 import { LoginUserComponent } from './login-user/login-user.component';
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule} from '@angular/common/http';
+import { AdminLoginComponent } from './admin-login/admin-login.component'
 
 const myroute:Routes=[
   {
@@ -17,6 +18,9 @@ const myroute:Routes=[
   },{
     path:'login',
     component:LoginUserComponent
+  },{
+    path:'adminlogin',
+    component:AdminLoginComponent
   }
 ]
 
@@ -24,7 +28,8 @@ const myroute:Routes=[
   declarations: [
     AppComponent,
     RegistrationPageComponent,
-    LoginUserComponent
+    LoginUserComponent,
+    AdminLoginComponent
   ],
   imports: [
     BrowserModule,
