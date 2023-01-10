@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ValidationErrors } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-registration-page',
@@ -16,8 +17,18 @@ export class RegistrationPageComponent {
   address=""
 
  
-  constructor(private val:Router){}
+
+  
+  constructor(private val:Router,private api:ApiService){}
   read=()=>{
+    let data:any={
+      "name":this.name,
+      "email":this.email,
+      "password":this.password,
+      "pn":this.pn,
+      "cnfrm":this.cnfrm,
+      "address":this.address
+    }
     if(this.name.length==0 || this.email.length==0 || this.password.length==0 || this.cnfrm.length==0 || this.pn.length==0 || this.address.length==0 ){
       alert("All Fields Are Required..")
 
@@ -27,11 +38,25 @@ export class RegistrationPageComponent {
       
     }
     if(this.password==this.cnfrm){
-      this.val.navigate(['/'])
+      this.api.register(data).subscribe(
+        (res:any)=>{
+          console.log(res)
+          if(res.status=="success"){
+            alert("Registered Successfully");this.val.navigate(['/login'])
+          }
+          else{
+            alert("Email already Exist");
+           // this.val.navigate(['/'])
+          }
+        }
+      )
+      
     }
     else{
       alert("password and confirm password did not matched")
     }
+    
+    
     
 
     

@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="row g-3">
+        <div class="col col-sm-12 col-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12  crd">
+
+            <div class="card col des" style="max-width: 600px;">
+                <div class="row g-0">
+                  
+                  <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <div class="card-body text-center">
+                      <h3 class="card-title">Sign In</h3>
+                      <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                         <input type="email" name="email" [(ngModel)]="email" placeholder="Enter Email" class="form-control e">
+                      </div>
+                      
+
+                      <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 mt-2">
+                      <show-hide-password size="sm"  [btnOutline]="true" >
+                        <input type="password" placeholder="Enter Password" class="form-control"  name="password"  [(ngModel)]="password">
+                      </show-hide-password>
+                      </div>
+                      <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 mt-2">
+                        <a href="" class="float-end text-dark"  >Forgot Your password?</a>
+                     </div>
+
+
+                      
+                      <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 mt-4">
+                        <button class="btn btn-success float-start" (click)="read()">Sign In</button>
+                      </div>
+
+
+
+                      
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6 ">
+                    <img src="https://img.etimg.com/thumb/msid-92328597,width-650,height-488,imgsize-146516,,resizemode-75/food.jpg" class="rounded-circle img-fluid rounded-start mt-3" alt="...">
+                    <p class="mt-3">Already Member?</p>
+                    <a routerLink="/" style="align-items: center;">Sign-Up here</a>
+                    
+                  </div>
+                </div>
+              </div>
+
+        </div>
+    </div>
+</div>
